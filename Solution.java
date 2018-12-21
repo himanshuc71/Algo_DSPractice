@@ -9,7 +9,7 @@ public class Solution {
                     dp[col][row] = dp [col][row-1] + dp[col-1][row];
             }
         }
-        return dp[m][n];   // returns the unique bottomrightCorner
+        return dp[m-1][n-1];   // returns the unique bottomrightCorner
     }
 
     public static void main(String[] args) {
