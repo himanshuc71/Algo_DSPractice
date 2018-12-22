@@ -4,7 +4,7 @@ public class Solution {
         for (int col = 0; col < m; col++){
             for (int row = 0; row < n; row++){
                 if (row == 0 || col == 0)
-                    dp[col][row] = 1;
+                    dp[col][row] = 1;   // only one way to go right or bottom
                 else
                     dp[col][row] = dp [col][row-1] + dp[col-1][row];
             }
