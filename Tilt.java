@@ -9,12 +9,12 @@
  * }
  */
 class Solution {
-    int tilt = 0;                           // can't use as a function argument as it will set                                              back to 0 on every stack call as it is postOrder
+    int tilt = 0;                         // can't use as a function argument as it will set back to 0 on every stack call as it is postOrder
     public int findTilt(TreeNode root) {
         tiltFinder(root);
         return tilt;
     }
-    public int tiltFinder(TreeNode root) {// Should be post order as we are going to                                                        the bottom and adding up the tilt
+    public int tiltFinder(TreeNode root) {// Should be post order as we are going to the bottom and adding up the tilt
         if(root==null )
             return 0;
         int left=tiltFinder(root.left);
